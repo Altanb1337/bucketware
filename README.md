@@ -9,6 +9,7 @@ if you have any questions about this project you can ask them at discord my disc
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
 Design inspired from Nightfarm
 ## Todo
+- [ ] Optimize cpu usage
 - [x] Add coredata builder
 - [x] Add Proxy
 - [ ] Make proxy workable
