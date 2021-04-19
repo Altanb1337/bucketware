@@ -22,6 +22,7 @@ namespace Bucketware.Layouts
     public partial class MainForm : Form
     {
         public static bool toggleAutofarmerBool = false;
+        public static bool locked = true;
         public MainForm()
         {
             InitializeComponent();
@@ -89,7 +90,6 @@ namespace Bucketware.Layouts
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             this.Opacity = 98;
             imports.GetWindowRect(imports.handle, out imports.rect);
             this.Left = imports.rect.left;
@@ -143,11 +143,18 @@ namespace Bucketware.Layouts
         {
             while (true)
             {
-                CheckForIllegalCrossThreadCalls = false;
-                imports.GetWindowRect(imports.handle, out imports.rect);
-                this.Left = imports.rect.left;
-                this.Top = imports.rect.top;
-                Thread.Sleep(BWare.inter);
+                if (locked is true)
+                {
+                    CheckForIllegalCrossThreadCalls = false;
+                    imports.GetWindowRect(imports.handle, out imports.rect);
+                    this.Left = imports.rect.left;
+                    this.Top = imports.rect.top;
+                    Thread.Sleep(BWare.inter);
+                }
+                else
+                {
+                    Thread.Sleep(2500);
+                }
             }
         }
 
@@ -266,60 +273,35 @@ namespace Bucketware.Layouts
         /// <summary>
         /// Focus not ready fully yet it
         /// </summary>
-        public static string proc = "Growtopia";
-        public static void OnFocusChanged(object sender, AutomationFocusChangedEventArgs e)
-        {
-            AutomationElement focusedElement = sender as AutomationElement;
-            if (focusedElement != null)
-            {
-                int processId = focusedElement.Current.ProcessId;
-                using (Process process = Process.GetProcessById(processId))
-                {
-                    Console.WriteLine(process.ProcessName);
-                    proc = process.ProcessName;
-                }
-            }
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            bool w = false;
-            if (!proc.Contains("Growtopia"))
-            {
-                TopMost = false;
-            }
-            else
-            {
-                if (proc.Contains("Bucketware"))
-                {
 
-                }
-                else
-                {
-                    BringToFront();
-                    TopMost = true;
-                }
-            }
-            /* Console.WriteLine("1");
-             if ((ModifierKeys & Keys.Control) == Keys.Control)
-             {
-                 if (w is false)
-                 {
-                     this.WindowState = FormWindowState.Minimized;
-                     w = true;
-                 }
-                 else if (w is true)
-                 {
-                     this.WindowState = FormWindowState.Normal;
-                     w = false;
-                 }
-             }
-            */
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            AutomationFocusChangedEventHandler focusHandler = OnFocusChanged;
-            Automation.AddAutomationFocusChangedEventHandler(focusHandler);
+        }
+
+        private void guna2CustomCheckBox35_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (guna2CustomCheckBox35.Checked is true)
+            {
+                guna2DragControl1.TargetControl = guna2Panel1;
+                locked = false;
+                Console.WriteLine("Locked  = false");
+            }
+            else
+            {
+                guna2DragControl1.TargetControl = label47;
+                locked = true;
+                Console.WriteLine("Locked  = true");
+            }
+        }
+
+        private void guna2CustomCheckBox34_MouseHover(object sender, EventArgs e)
+        {
+            BWare.tip(guna2CustomCheckBox34, "Makes cpu usage lower");
         }
     }
 }

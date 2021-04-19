@@ -134,16 +134,19 @@ namespace Bucketware.Layouts
             this.label12 = new System.Windows.Forms.Label();
             this.guna2CustomCheckBox5 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label46 = new System.Windows.Forms.Label();
+            this.guna2CustomCheckBox35 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label44 = new System.Windows.Forms.Label();
             this.guna2CustomCheckBox34 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.guna2CustomCheckBox6 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.label47 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -351,7 +354,6 @@ namespace Bucketware.Layouts
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(139, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1927,6 +1929,9 @@ namespace Bucketware.Layouts
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.tabPage5.Controls.Add(this.label47);
+            this.tabPage5.Controls.Add(this.label46);
+            this.tabPage5.Controls.Add(this.guna2CustomCheckBox35);
             this.tabPage5.Controls.Add(this.label44);
             this.tabPage5.Controls.Add(this.guna2CustomCheckBox34);
             this.tabPage5.Controls.Add(this.label15);
@@ -1937,6 +1942,39 @@ namespace Bucketware.Layouts
             this.tabPage5.Size = new System.Drawing.Size(530, 342);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.Location = new System.Drawing.Point(52, 106);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(99, 17);
+            this.label46.TabIndex = 19;
+            this.label46.Text = "Unlock from gt";
+            // 
+            // guna2CustomCheckBox35
+            // 
+            this.guna2CustomCheckBox35.Animated = true;
+            this.guna2CustomCheckBox35.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(194)))), ((int)(((byte)(210)))));
+            this.guna2CustomCheckBox35.CheckedState.BorderRadius = 2;
+            this.guna2CustomCheckBox35.CheckedState.BorderThickness = 0;
+            this.guna2CustomCheckBox35.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(194)))), ((int)(((byte)(210)))));
+            this.guna2CustomCheckBox35.CheckedState.Parent = this.guna2CustomCheckBox35;
+            this.guna2CustomCheckBox35.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(194)))), ((int)(((byte)(210)))));
+            this.guna2CustomCheckBox35.Location = new System.Drawing.Point(14, 99);
+            this.guna2CustomCheckBox35.Name = "guna2CustomCheckBox35";
+            this.guna2CustomCheckBox35.ShadowDecoration.Parent = this.guna2CustomCheckBox35;
+            this.guna2CustomCheckBox35.Size = new System.Drawing.Size(32, 30);
+            this.guna2CustomCheckBox35.TabIndex = 18;
+            this.guna2CustomCheckBox35.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.guna2CustomCheckBox35.UncheckedState.BorderRadius = 2;
+            this.guna2CustomCheckBox35.UncheckedState.BorderThickness = 0;
+            this.guna2CustomCheckBox35.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.guna2CustomCheckBox35.UncheckedState.Parent = this.guna2CustomCheckBox35;
+            this.guna2CustomCheckBox35.CheckedChanged += new System.EventHandler(this.guna2CustomCheckBox35_CheckedChanged);
             // 
             // label44
             // 
@@ -1970,6 +2008,7 @@ namespace Bucketware.Layouts
             this.guna2CustomCheckBox34.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.guna2CustomCheckBox34.UncheckedState.Parent = this.guna2CustomCheckBox34;
             this.guna2CustomCheckBox34.CheckedChanged += new System.EventHandler(this.guna2CustomCheckBox34_CheckedChanged);
+            this.guna2CustomCheckBox34.MouseHover += new System.EventHandler(this.guna2CustomCheckBox34_MouseHover);
             // 
             // label15
             // 
@@ -2005,15 +2044,6 @@ namespace Bucketware.Layouts
             this.guna2CustomCheckBox6.CheckedChanged += new System.EventHandler(this.guna2CustomCheckBox6_CheckedChanged);
             this.guna2CustomCheckBox6.MouseHover += new System.EventHandler(this.guna2CustomCheckBox6_MouseHover);
             // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(530, 342);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
@@ -2034,6 +2064,20 @@ namespace Bucketware.Layouts
             // 
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(479, 315);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(41, 13);
+            this.label47.TabIndex = 20;
+            this.label47.Text = "label47";
+            this.label47.Visible = false;
             // 
             // MainForm
             // 
@@ -2185,9 +2229,12 @@ namespace Bucketware.Layouts
         private System.Windows.Forms.Label label45;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label46;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox35;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.Label label47;
     }
 }
