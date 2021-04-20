@@ -25,7 +25,9 @@ F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.csproj.CopyComp
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.exe
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.pdb
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.Layouts.MainForm.resources
-F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\ENet.Managed.dll
-F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\ENet.Managed.pdb
-F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\ENet.Managed.xml
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.csprojAssemblyReference.cache
+F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.ENet.Managed.ENetBinariesResource.resources
+F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Threading.Channels.dll
+F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
+F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Threading.Channels.xml
+F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Threading.Tasks.Extensions.xml

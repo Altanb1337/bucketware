@@ -103,9 +103,6 @@
     <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
     </Reference>
-    <Reference Include="ENet.Managed">
-      <HintPath>C:\Users\Fyrax\Downloads\ENet.Managed-4.2.6\ENet.Managed-4.2.6\src\ENet.Managed\bin\Debug\net45\ENet.Managed.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -131,6 +128,12 @@
     <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Channels, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.5.0.0\lib\net461\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -144,6 +147,65 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ENet.Managed\Allocators\ENetAllocator.cs" />
+    <Compile Include="ENet.Managed\Allocators\ENetHGlobalAllocator.cs" />
+    <Compile Include="ENet.Managed\Allocators\ENetPooledAllocator.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncHost.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncHostState.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncHostStoppedException.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncPacket.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncPeer.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncPeerDisconnectedException.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncPeerResetException.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncSharedState.cs" />
+    <Compile Include="ENet.Managed\Async\ENetAsyncStatistics.cs" />
+    <Compile Include="ENet.Managed\Checksums\ENetChecksum.cs" />
+    <Compile Include="ENet.Managed\Checksums\ENetSentinelChecksum.cs" />
+    <Compile Include="ENet.Managed\Common\DisposableBase.cs" />
+    <Compile Include="ENet.Managed\Common\DoesNotReturnAttribute.cs" />
+    <Compile Include="ENet.Managed\Compressors\ENetCompressor.cs" />
+    <Compile Include="ENet.Managed\Compressors\ENetSentinelCompressor.cs" />
+    <Compile Include="ENet.Managed\ENetAddressType.cs" />
+    <Compile Include="ENet.Managed\ENetBinariesResource.cs" />
+    <Compile Include="ENet.Managed\ENetEvent.cs" />
+    <Compile Include="ENet.Managed\ENetEventType.cs" />
+    <Compile Include="ENet.Managed\ENetException.cs" />
+    <Compile Include="ENet.Managed\ENetExtensionMethods.cs" />
+    <Compile Include="ENet.Managed\ENetHost.cs" />
+    <Compile Include="ENet.Managed\ENetHostPeerList.cs" />
+    <Compile Include="ENet.Managed\ENetPacket.cs" />
+    <Compile Include="ENet.Managed\ENetPacketFlags.cs" />
+    <Compile Include="ENet.Managed\ENetPeer.cs" />
+    <Compile Include="ENet.Managed\ENetPeerState.cs" />
+    <Compile Include="ENet.Managed\ENetStartupOptions.cs" />
+    <Compile Include="ENet.Managed\ENetUserDataContainer.cs" />
+    <Compile Include="ENet.Managed\IENetEventListener.cs" />
+    <Compile Include="ENet.Managed\IENetUserDataContainer.cs" />
+    <Compile Include="ENet.Managed\Internal\FriendAssemblies.cs" />
+    <Compile Include="ENet.Managed\Internal\InternalExtensionMethods.cs" />
+    <Compile Include="ENet.Managed\Internal\Threading\FiloSemaphore.cs" />
+    <Compile Include="ENet.Managed\Internal\Threading\SharedStateLock.cs" />
+    <Compile Include="ENet.Managed\Internal\Threading\SharedStateLockguard.cs" />
+    <Compile Include="ENet.Managed\Internal\ThrowHelper.cs" />
+    <Compile Include="ENet.Managed\ManagedENet.cs" />
+    <Compile Include="ENet.Managed\ManagedENetHelpers.cs" />
+    <Compile Include="ENet.Managed\Native\ENetCallbacksDelegates.cs" />
+    <Compile Include="ENet.Managed\Native\ENetInterceptionResult.cs" />
+    <Compile Include="ENet.Managed\Native\LibENet.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetAddress.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetBuffer.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetCallbacks.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetCompressor.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetEvent.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetList.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetListNode.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetPacket.cs" />
+    <Compile Include="ENet.Managed\Native\NativeENetPeer.cs" />
+    <Compile Include="ENet.Managed\Platforms\LinuxApi.cs" />
+    <Compile Include="ENet.Managed\Platforms\LinuxPlatform.cs" />
+    <Compile Include="ENet.Managed\Platforms\Platform.cs" />
+    <Compile Include="ENet.Managed\Platforms\Win32Api.cs" />
+    <Compile Include="ENet.Managed\Platforms\Win32Platform.cs" />
     <Compile Include="Layouts\Launcher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +231,7 @@
     <Compile Include="Proxy\TankPacketUpdate.cs" />
     <Compile Include="Proxy\VariantList.cs" />
     <Compile Include="Proxy\WorldAndPlayer.cs" />
+    <EmbeddedResource Include="ENet.Managed\ENetBinariesResource.resx" />
     <EmbeddedResource Include="Layouts\Launcher.resx">
       <DependentUpon>Launcher.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,5 +279,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

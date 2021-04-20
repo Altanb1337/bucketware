@@ -268,6 +268,15 @@ namespace Bucketware.Layouts
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            try
+            {
+                Process[] procs = Process.GetProcessesByName("Growtopia");
+                foreach (Process p in procs) { p.Kill(); }
+            }
+            catch
+            {
+
+            }
             Application.Exit();
         }
         /// <summary>
@@ -275,7 +284,15 @@ namespace Bucketware.Layouts
         /// </summary>
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Process[] pname = Process.GetProcessesByName("Growtopia");
+            if (pname.Length > 0)
+            {
 
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
