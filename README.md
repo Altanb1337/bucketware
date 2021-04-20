@@ -31,6 +31,7 @@ Design inspired from Growmatic
 |    Windows 10  | No  | Yes |    Yes    |
 |    Windows 8   | No  | Yes |  Unknown  |
 |    Windows 7   | No  | Yes |  Unknown  |
+This program uses cpu avg 25% without low cpu mode (Whit low cpu mode 0-5%)
 
 # Notes
 * This is totally free program dont buy/sell it..
