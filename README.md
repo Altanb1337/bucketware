@@ -6,7 +6,7 @@ This project is still indev, so its not ready to use fully
 if you have any questions about this project you can ask them at discord my discord is:Fyrax#7192
 ## Bucketware
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
-Design inspired from Nightfarm
+Design inspired from Growmatic
 ## Todo
 - [x] Optimize cpu usage
 - [x] Add coredata builder
@@ -43,3 +43,8 @@ Design inspired from Nightfarm
 ![Image1](https://cdn.discordapp.com/attachments/712619822772650024/833195232019087410/unknown.png)
 
 ![Image2](https://cdn.discordapp.com/attachments/712619822772650024/833195268824104970/unknown.png)
+
+# Credits
+* ![ENet.Managed](https://github.com/moien007/enet)
+* ![Proxy oringial code](https://github.com/playingoDEERUX/growbrewproxy)
+Reason why this is opensource is that i want give people safe and free autofarmer/hack for growtopia and maybe they can make it better, if you fork this make sure to do pull request i can maybe apply it if its really useful fork but dont just rename this and say this is "your project"
