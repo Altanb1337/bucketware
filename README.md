@@ -1,5 +1,5 @@
 [![Discord](https://img.shields.io/discord/769207196608102430?label=discord)](https://discord.gg/JaRmMmTsEN)
-[![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/enet)
+[![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/ENet.Managed)
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
 ## This project isnt ready!
 This project is still indev, so its not ready to use fully
