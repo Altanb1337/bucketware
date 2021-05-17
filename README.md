@@ -1,9 +1,10 @@
 [![Discord](https://img.shields.io/discord/769207196608102430?label=discord)](https://discord.gg/JaRmMmTsEN)
 [![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/ENet.Managed)
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
-## This project isnt ready!
-This project is still indev, so its not ready to use fully
-if you have any questions about this project you can ask them at discord my discord is:Fyrax#7192
+## This project is CANCELLED!
+
+
+
 ## Bucketware
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
 Design inspired from Growmatic
@@ -48,4 +49,3 @@ This program uses cpu avg 25% without low cpu mode (Whit low cpu mode 0-5%)
 # Credits
 * ![ENet.Managed](https://github.com/moien007/enet)
 * ![Proxy oringial code](https://github.com/playingoDEERUX/growbrewproxy)
-Reason why this is opensource is that i want give people safe and free autofarmer/hack for growtopia and maybe they can make it better, if you fork this make sure to do pull request i can maybe apply it if its really useful fork but dont just rename this and say this is "your project"
